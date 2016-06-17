@@ -1,5 +1,7 @@
 ###Create a rotated 3D cube with WebGL
 
+<img src="https://raw.githubusercontent.com/ultra7677/ADWEBLab2/master/image/pic3.jpg" width="400">  
+
 This article records my learing experiences of WebGL, and I was totally new about both computer graphics and WebGL before.
 
 WebGL enables web content to use an API based on OpenGL ES 2.0 to perform 3D rendering in an HTML canvas in browsers that support it without the use of plug-ins.  
@@ -117,7 +119,7 @@ Then, we create a array of vertices for that cube.(four vertices per side)
   // Now pass the list of vertices into WebGL to build the shape. 
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
 </code></pre>
-//photo  
+<img src="https://raw.githubusercontent.com/ultra7677/ADWEBLab2/master/image/pic1.jpg" width="400">  
 And we need to build an array of colors for each of 24 vertices. And we need to make sure that vertuces of each side has the same color and add these color data to buffer.  
 <pre><code>  // Now set up the colors for the faces.
   var colors = [
@@ -157,9 +159,7 @@ This array defines each face as two triangles, using the indices into the vertex
   gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,
   new Uint16Array(cubeVertexIndices), gl.STATIC_DRAW);
 </code></pre>  
-
-// photo  
-
+<img src="https://raw.githubusercontent.com/ultra7677/ADWEBLab2/master/image/pic2.jpg" width="400" height="500">  
 ##### Drawing the cube
 The last part is about function `drawScene()`. We first draw the cube and then update the rotate of it.
 
